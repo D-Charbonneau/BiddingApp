@@ -1,0 +1,96 @@
+$color1: #b9001c;
+$color2: #1c00b9;
+
+body
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #222222;
+}
+
+.inputRow
+{
+    border: 2px #1a1a1a solid;
+    background-color: #1f1f1f;
+    padding: 20px 50px;
+    position: relative;
+    bottom: 0px;
+    button:hover
+    {
+        background-color: adjust-color($color: $color2, $red: 20, $green: 0, $blue: -50, $alpha: 1.0);
+        &:nth-child(1)
+        {
+            background-color: adjust-color($color: $color1, $red: -50, $green: 0, $blue: 20, $alpha: 1.0);
+        }
+    }
+    :nth-child(1n)
+    {
+        background-color: $color1;
+        margin: 0px 20px;
+        padding: 12px;
+        border-radius: 20px;
+        color: white;
+        border: none;
+    }
+    :nth-child(1n + 3)
+    {
+        background-color: $color2;
+    }
+}
+
+#bidding
+{
+    border: 2px #1a1a1a solid;
+    background-color: #1f1f1f;
+    width: 50vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #1c1c1c #1f1f1f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1f1f1f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+    .bid1, .bid2
+    {
+        background-color: white;
+        align-self: flex-start;
+        padding: 20px;
+        background-color: $color1;
+        color: white;
+        border-radius: 5px;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        text-shadow: 2px 2px 5px #1a1a1a;
+    }
+    .bid2
+    {
+        background-color: $color2;
+        align-self: flex-end;
+        text-align: end;
+    }
+}
+

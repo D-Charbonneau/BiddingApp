@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: #222222;
+}
+
+.inputRow {
+  border: 2px #1a1a1a solid;
+  background-color: #1f1f1f;
+  padding: 20px 50px;
+  position: relative;
+  bottom: 0px;
+}
+.inputRow button:hover {
+  background-color: #300087;
+}
+.inputRow button:hover:nth-child(1) {
+  background-color: #870030;
+}
+.inputRow :nth-child(1n) {
+  background-color: #b9001c;
+  margin: 0px 20px;
+  padding: 12px;
+  border-radius: 20px;
+  color: white;
+  border: none;
+}
+.inputRow :nth-child(1n+3) {
+  background-color: #1c00b9;
+}
+
+#bidding {
+  border: 2px #1a1a1a solid;
+  background-color: #1f1f1f;
+  width: 50vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  /* Chrome, Edge, and Safari */
+}
+#bidding * {
+  scrollbar-width: auto;
+  scrollbar-color: #1c1c1c #1f1f1f;
+}
+#bidding *::-webkit-scrollbar {
+  width: 16px;
+}
+#bidding *::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+#bidding *::-webkit-scrollbar-thumb {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+#bidding .bid1, #bidding .bid2 {
+  background-color: white;
+  align-self: flex-start;
+  padding: 20px;
+  background-color: #b9001c;
+  color: white;
+  border-radius: 5px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  text-shadow: 2px 2px 5px #1a1a1a;
+}
+#bidding .bid2 {
+  background-color: #1c00b9;
+  align-self: flex-end;
+  text-align: end;
+}
+
+/*# sourceMappingURL=style.css.map */
